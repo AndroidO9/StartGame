@@ -1,13 +1,14 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+[Serializable]
 public class CardScriptableObject : MonoBehaviour
 {
     
     [SerializeField] int attackDamage, health , price;
     [SerializeField] string word, description;
     [SerializeField] Text WordText, DescriptionText, AttackValueText, HealthNumderText, PriceText;
+    [SerializeField] bool IsActive;
     private void AppearanceInHand()
     {
 
