@@ -12,10 +12,10 @@ public class MyCards : MonoBehaviour
 		{
 			MCards.Add(t.gameObject);
 		}
-		gameObject.transform.position = new Vector3((2.1f * MCards.Count)/2, 1f, gameObject.transform.position.z);
+		gameObject.transform.position = new Vector3((2.1f * MCards.Count)/2, 1f, -5f);
 		for (int i = 0; i < MCards.Count; i++)
 		{
-			MCards[i].transform.position = new Vector3(2.1f * i-transform.position.x+1,1, gameObject.transform.position.z);
+			MCards[i].transform.position = new Vector3(2.1f * i-transform.position.x+1,2,-5);
 		}
 	}
 }
