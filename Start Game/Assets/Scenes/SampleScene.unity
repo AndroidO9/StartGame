@@ -1289,8 +1289,10 @@ MonoBehaviour:
   Shop: {fileID: 2124123117}
   MoyCards: {fileID: 2042259197}
   Pered: {fileID: 195245961}
-  Kard: {fileID: 8483383532673280881, guid: cdf79057709719344bbdeb621cbef6d2, type: 3}
+  PeredP: {fileID: 145624042}
+  kard: {fileID: 8483383532673280881, guid: cdf79057709719344bbdeb621cbef6d2, type: 3}
   BotMap: {fileID: 0}
+  GM: {fileID: 1759860779}
   coin: 0
   timeS: 2.5
   time: 2.5

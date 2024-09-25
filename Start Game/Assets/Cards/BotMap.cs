@@ -46,12 +46,15 @@ public class BotMap : MonoBehaviour
 		if (!BWin)
 		{
 			bot.SetActive(true);
-			bot.GetComponent<Bot>().time = 2.5f;
-			bot.GetComponent<Bot>().timeS = 30f;
+			bot.GetComponent<Bot>().timeS = 2.5f;
+			bot.GetComponent<Bot>().NtimeS = 30f;
 			bot.GetComponent<Bot>().coin = 0;
 			bot.GetComponent<Bot>().stop = false;
 			bot.GetComponent<Bot>().BotMap = gameObject;
 			bot.GetComponent<Bot>().HP = 100;
+			bot.GetComponent<Bot>().NewCard1 = NewCard1;
+			bot.GetComponent<Bot>().NewCard2 = NewCard2;
+			bot.GetComponent<Bot>().NewCard3 = NewCard3;
 			Perexod.SetActive(true);
 			Mcam.gameObject.SetActive(false);
 			Pcam.gameObject.SetActive(true);

@@ -3,7 +3,7 @@
 public class Bot : MonoBehaviour
 {
 	public CardsObject NewCard1, NewCard2, NewCard3;
-	public GameObject Shop, MoyCards, Pered, Kard, BotMap;
+	public GameObject Shop, MoyCards, Pered, PeredP, kard, BotMap, GM;
 	public int coin;
 	public float timeS, time;
 	public float NtimeS, Ntime;
@@ -31,8 +31,12 @@ public class Bot : MonoBehaviour
 		if (Ntime <= 0 && !stop)
 		{
 			Ntime = NtimeS;
-			int c = UnityEngine.Random.Range(0, 4);
-			GameObject kards = Instantiate(Kard, MoyCards.transform.position, MoyCards.transform.rotation, transform);
+			int c = UnityEngine.Random.Range(1, 4);
+			GameObject Kard = Instantiate(kard, MoyCards.transform);
+			Kard.GetComponent<CardScriptableObject>().Pered = PeredP;
+			Kard.GetComponent<CardScriptableObject>().PeredBot = Pered;
+			Kard.GetComponent<CardScriptableObject>().bot = this;
+			Kard.GetComponent<CardScriptableObject>().GM = GM.GetComponent<GameCardList>();
 			switch (c)
 			{
 				case 1:
@@ -41,6 +45,7 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().price = NewCard1.price;
 					Kard.GetComponent<CardScriptableObject>().word = NewCard1.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard1.description;
+					Kard.GetComponent<CardScriptableObject>().Stime = NewCard1.time;
 					break;
 				case 2:
 					Kard.GetComponent<CardScriptableObject>().attackDamage = NewCard2.attackDamage;
@@ -48,6 +53,7 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().price = NewCard2.price;
 					Kard.GetComponent<CardScriptableObject>().word = NewCard2.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard2.description;
+					Kard.GetComponent<CardScriptableObject>().Stime = NewCard2.time;
 					break;
 				case 3:
 					Kard.GetComponent<CardScriptableObject>().attackDamage = NewCard3.attackDamage;
@@ -55,9 +61,9 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().price = NewCard3.price;
 					Kard.GetComponent<CardScriptableObject>().word = NewCard3.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard3.description;
+					Kard.GetComponent<CardScriptableObject>().Stime = NewCard3.time;
 					break;
 			}
-			kards.transform.SetParent(MoyCards.transform);
 		}
 	}
 	void Kards()
