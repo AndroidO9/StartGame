@@ -61,8 +61,4 @@ public class BotMap : MonoBehaviour
 			GM.GetComponent<GameCardList>().BattalStart();
 		}
 	}
-	public void r()
-	{
-		PlayerPrefs.SetInt(NameMap, 0);
-	}
 }

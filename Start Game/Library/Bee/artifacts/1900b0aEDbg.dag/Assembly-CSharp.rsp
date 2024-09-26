@@ -356,6 +356,7 @@
 "Assets/Cards/BotMap.cs"
 "Assets/Cards/CardScriptableObject.cs"
 "Assets/Cards/CardsObject.cs"
+"Assets/Cards/ClearBotMap.cs"
 "Assets/Cards/Coin.cs"
 "Assets/Cards/GameCardList.cs"
 "Assets/Cards/KardsShop.cs"
@@ -363,6 +364,7 @@
 "Assets/Cards/Perexod.cs"
 "Assets/Cards/PerexodKards.cs"
 "Assets/Cards/Shop.cs"
+"Assets/Сomplexity.cs"
 -langversion:9.0
 
 /deterministic
