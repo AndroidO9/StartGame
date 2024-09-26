@@ -11,6 +11,10 @@ public class Bot : MonoBehaviour
 	public bool stop;
 	void Update()
 	{
+		if(GM.GetComponent<GameCardList>().HP <= 0)
+        {
+			BotMap.GetComponent<BotMap>().Lose();
+        }
 		if(HP <= 0)
 		{
 			stop = true;
@@ -68,7 +72,7 @@ public class Bot : MonoBehaviour
 	}
 	void Kards()
 	{
-		int x = UnityEngine.Random.Range(0, 1);
+		int x = UnityEngine.Random.Range(0, 2);
 		if(MoyCards.transform.childCount >= 4)
 		{
 			x = 0;

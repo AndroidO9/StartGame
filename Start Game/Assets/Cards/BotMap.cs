@@ -41,6 +41,15 @@ public class BotMap : MonoBehaviour
 		BWin = true;
 		Perexod.SetActive(false);
 	}
+	public void Lose()
+    {
+		Pcam.gameObject.SetActive(false);
+		Mcam.gameObject.SetActive(true);
+		Perexod.SetActive(false);
+		bot.SetActive(false);
+		PlayerPrefs.SetInt(NameMap, 0);
+		BWin = false;
+	}
 	public void Button()
 	{
 		if (!BWin)

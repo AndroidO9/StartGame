@@ -86,10 +86,6 @@ public class GameCardList : MonoBehaviour
 				Creat(ShopCards, true);
 			}
 		}
-		if(HP<=0)
-		{
-			Debug.Log("Умер");
-		}
 	}
 }
 
