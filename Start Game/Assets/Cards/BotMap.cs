@@ -30,7 +30,8 @@ public class BotMap : MonoBehaviour
 	}
 	public void Win()
 	{
-		Debug.Log("ggg");
+		GM.GetComponent<GameCardList>().Clear();
+		Debug.Log("Победа");
 		GM.GetComponent<GameCardList>().GameCards.Add(NewCard1);
 		GM.GetComponent<GameCardList>().GameCards.Add(NewCard2);
 		GM.GetComponent<GameCardList>().GameCards.Add(NewCard3);
@@ -43,6 +44,8 @@ public class BotMap : MonoBehaviour
 	}
 	public void Lose()
     {
+		Debug.Log("Поражение");
+		GM.GetComponent<GameCardList>().Clear();
 		Pcam.gameObject.SetActive(false);
 		Mcam.gameObject.SetActive(true);
 		Perexod.SetActive(false);

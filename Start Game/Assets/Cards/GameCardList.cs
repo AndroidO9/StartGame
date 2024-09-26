@@ -13,8 +13,8 @@ public class GameCardList : MonoBehaviour
 	public Bot bot;
 	public int HP;
 	public int VC;
-	public void BattalStart()
-	{
+	public void Clear()
+    {
 		foreach (Transform t in ShopCards.transform)
 		{
 			Destroy(t.gameObject);
@@ -35,6 +35,9 @@ public class GameCardList : MonoBehaviour
 		{
 			Destroy(t.gameObject);
 		}
+	}
+	public void BattalStart()
+	{
 		for (int i = 0; i < VC; i++)
 		{
 			Creat(MoyCards, false);

@@ -13,8 +13,13 @@ public class Bot : MonoBehaviour
 	{
 		if(GM.GetComponent<GameCardList>().HP <= 0)
         {
+			stop = true;
 			BotMap.GetComponent<BotMap>().Lose();
-        }
+			BotMap = null;
+			NewCard1 = null;
+			NewCard2 = null;
+			NewCard3 = null;
+		}
 		if(HP <= 0)
 		{
 			stop = true;
