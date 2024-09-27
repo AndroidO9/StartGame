@@ -41,6 +41,7 @@ public class BotMap : MonoBehaviour
 		Mcam.gameObject.SetActive(true);
 		BWin = true;
 		Perexod.SetActive(false);
+		PlayerCharacteristic.instance.AddCoins(1);
 	}
 	public void Lose()
     {

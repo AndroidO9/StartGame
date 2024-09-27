@@ -19,6 +19,7 @@ public class Bot : MonoBehaviour
 			NewCard1 = null;
 			NewCard2 = null;
 			NewCard3 = null;
+			GM.GetComponent<GameCardList>().Shop = false;
 		}
 		if(HP <= 0)
 		{
@@ -28,6 +29,7 @@ public class Bot : MonoBehaviour
 			NewCard1 = null;
 			NewCard2 = null;
 			NewCard3 = null;
+			GM.GetComponent<GameCardList>().Shop = false;
 		}
 		time -= Time.deltaTime;
 		if(time <= 0 && !stop)

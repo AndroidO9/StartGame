@@ -13,6 +13,7 @@ public class GameCardList : MonoBehaviour
 	public Bot bot;
 	public int HP;
 	public int VC;
+	public bool Shop;
 	public void Clear()
     {
 		foreach (Transform t in ShopCards.transform)
@@ -48,6 +49,7 @@ public class GameCardList : MonoBehaviour
 		}
 		gameObject.GetComponent<Coin>().T = 0;
 		gameObject.GetComponent<Coin>().coin = 0;
+		Shop = true;
 	}
 	void Creat(GameObject GM, bool Shop)
 	{
@@ -81,12 +83,15 @@ public class GameCardList : MonoBehaviour
 	}
 	void Update()
 	{
-		if(ShopCards.transform.childCount < 4)
+		if (Shop)
 		{
-			int x = 4-ShopCards.transform.childCount;
-			for (int i = 0; i < x; i++)
+			if (ShopCards.transform.childCount < 4)
 			{
-				Creat(ShopCards, true);
+				int x = 4 - ShopCards.transform.childCount;
+				for (int i = 0; i < x; i++)
+				{
+					Creat(ShopCards, true);
+				}
 			}
 		}
 	}

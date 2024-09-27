@@ -15,7 +15,6 @@ public class FightPoint : MonoBehaviour
             CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
             TextForStart.gameObject.SetActive(true);
             IsInTrigger = true;
-            PlayerCharacteristic.instance.AddCoins(1);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -28,9 +27,9 @@ public class FightPoint : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" &&  Input.GetKey(KeyCode.E) && IsInTrigger)
+        if (other.gameObject.tag == "Player" &&  Input.GetKeyDown(KeyCode.E) && IsInTrigger)
         {
-            SceneManager.LoadScene(0);
+            gameObject.GetComponent<BotMap>().Button();
         }
     }
 }
