@@ -49,3 +49,11 @@ Update Mode: updateDependencies
 The following packages were updated:
   com.unity.collab-proxy from version 2.2.0 to 2.3.1
   com.unity.visualscripting from version 1.9.1 to 1.9.4
+
+=== Fri Sep 27 15:49:40 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.ai.navigation@1.1.5
