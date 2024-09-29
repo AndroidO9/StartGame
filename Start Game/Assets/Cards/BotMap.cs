@@ -1,18 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BotMap : MonoBehaviour
 {
+	[SerializeField] private Text FightName, TextForStart;
+	[SerializeField] private Material CompleteTaskMateria;
+	[SerializeField] private GameObject CubeCoinObject;
+	[SerializeField] private string NameMapString;
+	private bool IsInTrigger = false;
 	public CardsObject NewCard1, NewCard2, NewCard3;
 	public GameObject GM, bot;
 	public string NameMap;
 	public bool BWin;
 	public Camera Mcam, Pcam;
 	public GameObject Perexod;
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag == "Player")
+		{
+			//CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
+			TextForStart.gameObject.SetActive(true);
+			IsInTrigger = true;
+		}
+	}
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "Player")
+		{
+			TextForStart.gameObject.SetActive(false);
+			IsInTrigger = false;
+		}
+	}
+	private void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && IsInTrigger)
+		{
+			gameObject.GetComponent<BotMap>().Button();
+		}
+	}
 	private void Start()
 	{
-		if(PlayerPrefs.HasKey(NameMap))
+		FightName.text = NameMap;
+		if (PlayerPrefs.HasKey(NameMap))
 		{
 			if(PlayerPrefs.GetInt(NameMap) == 1)
 			{
