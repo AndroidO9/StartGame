@@ -22,7 +22,10 @@ public class CardScriptableObject : MonoBehaviour
     }
 	private void Update()
 	{
-        time -= Time.deltaTime;
+        if(attackDamage != 0)
+        {
+			time -= Time.deltaTime;
+		}
         if (time <= 0)
         {
             time = Stime;
@@ -50,7 +53,7 @@ public class CardScriptableObject : MonoBehaviour
                     Pered.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
                 }
 			}
-        }
+		}
 	}
     public void Dam(int D)
     {
@@ -58,6 +61,7 @@ public class CardScriptableObject : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
-        }
-    }
+		}
+		HealthNumderText.text = health.ToString();
+	}
 }

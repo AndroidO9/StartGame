@@ -9,7 +9,6 @@ public class BotMap : MonoBehaviour
 	[SerializeField] private Material CompleteTaskMateria;
 	[SerializeField] private GameObject CubeCoinObject;
 	[SerializeField] private string NameMapString;
-	private bool IsInTrigger = false;
 	public CardsObject NewCard1, NewCard2, NewCard3;
 	public GameObject GM, bot;
 	public string NameMap;
@@ -22,7 +21,6 @@ public class BotMap : MonoBehaviour
 		{
 			//CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
 			TextForStart.gameObject.SetActive(true);
-			IsInTrigger = true;
 		}
 	}
 	private void OnTriggerExit(Collider other)
@@ -30,14 +28,13 @@ public class BotMap : MonoBehaviour
 		if (other.gameObject.tag == "Player")
 		{
 			TextForStart.gameObject.SetActive(false);
-			IsInTrigger = false;
 		}
 	}
 	private void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && IsInTrigger)
+		if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
 		{
-			gameObject.GetComponent<BotMap>().Button();
+			Button();
 		}
 	}
 	private void Start()
