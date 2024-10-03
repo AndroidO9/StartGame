@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 1825866848}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NameMap
-      value: Start
+      value: New tupe
       objectReference: {fileID: 0}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: Perexod
@@ -292,15 +292,15 @@ PrefabInstance:
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard1
       value: 
-      objectReference: {fileID: 11400000, guid: 49a836449a4fa9d4bb3d5ad81e9260c1, type: 2}
+      objectReference: {fileID: 11400000, guid: ab044db937611ec429924d30e3ef1efb, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard2
       value: 
-      objectReference: {fileID: 11400000, guid: 7a2303cbf0e9ce0429eda21c0bffcf1d, type: 2}
+      objectReference: {fileID: 11400000, guid: b744b243027cf124ebb94904c2d5343f, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard3
       value: 
-      objectReference: {fileID: 11400000, guid: a99bd24e33e0d094bbe1af867ca3654b, type: 2}
+      objectReference: {fileID: 11400000, guid: de1683febffc5e6488af04c08b1b8735, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: FightName
       value: 
@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 129198233}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NameMapString
-      value: "\u041D\u0430\u0447\u0430\u043B\u043E \u043D\u0430\u0447\u0430\u043B"
+      value: "\u041D\u043E\u0432\u044B\u0435 \u043A\u0430\u0440\u0442\u044B"
       objectReference: {fileID: 0}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: CubeCoinObject
@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9052111418227787823, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.81
+      value: 7.94
       objectReference: {fileID: 0}
     - target: {fileID: 9052111418227787823, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9052111418227787823, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.54
+      value: 33.58
       objectReference: {fileID: 0}
     - target: {fileID: 9052111418227787823, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2829,7 +2829,7 @@ PrefabInstance:
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: Pered
       value: 
-      objectReference: {fileID: 798361234}
+      objectReference: {fileID: 213134870}
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: MoyCards
       value: 
@@ -2837,7 +2837,7 @@ PrefabInstance:
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: PeredBot
       value: 
-      objectReference: {fileID: 158554670}
+      objectReference: {fileID: 1577122102}
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: ShopCards
       value: 
@@ -2853,15 +2853,15 @@ PrefabInstance:
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: GameCards.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b333a436ca02c8c47aa7236fd2c13f94, type: 2}
+      objectReference: {fileID: 11400000, guid: 689676cd6ac7b9347b347facaebaf526, type: 2}
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: GameCards.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 64a75530e8d96e14bb92409baf7d97dc, type: 2}
+      objectReference: {fileID: 11400000, guid: 5ac3eafdb8c480347990845470ce92b5, type: 2}
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: GameCards.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 73fd5e8f96f70114f8a2231617950266, type: 2}
+      objectReference: {fileID: 11400000, guid: 8fb13ceb67a44e54a93e95d44ce6d83c, type: 2}
     - target: {fileID: 3476380794165542059, guid: 8c195b512fd4e474082423f8ac123666, type: 3}
       propertyPath: GameCards.Array.data[3]
       value: 
@@ -3286,15 +3286,15 @@ PrefabInstance:
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard1
       value: 
-      objectReference: {fileID: 11400000, guid: 49a836449a4fa9d4bb3d5ad81e9260c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 97c72634c04978a49a6c7f8e31c7672a, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard2
       value: 
-      objectReference: {fileID: 11400000, guid: 7a2303cbf0e9ce0429eda21c0bffcf1d, type: 2}
+      objectReference: {fileID: 11400000, guid: a9cef4c44df0ccf4990b375bb34153da, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard3
       value: 
-      objectReference: {fileID: 11400000, guid: a99bd24e33e0d094bbe1af867ca3654b, type: 2}
+      objectReference: {fileID: 11400000, guid: bf0b9c9933a98de41a8fe14d3ee6feb2, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: FightName
       value: 
@@ -4209,15 +4209,15 @@ PrefabInstance:
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard1
       value: 
-      objectReference: {fileID: 11400000, guid: 77fa765df387a56478955fedd5760fb7, type: 2}
+      objectReference: {fileID: 11400000, guid: d4989eba2f6bb9c4e8cea724466e18d7, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard2
       value: 
-      objectReference: {fileID: 11400000, guid: 6a77d0f5a59e0aa41aef54dc3c32c4d4, type: 2}
+      objectReference: {fileID: 11400000, guid: 006bb405ac97f634ea51e2c0c63ceda2, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: NewCard3
       value: 
-      objectReference: {fileID: 11400000, guid: b6e31b2c1fe06af40a4ecd1d699a58ff, type: 2}
+      objectReference: {fileID: 11400000, guid: 2d075cbdf9b05f146ad67b726596996e, type: 2}
     - target: {fileID: 3123300703924641185, guid: 6ce13673074d608439ce9fdd262277c7, type: 3}
       propertyPath: FightName
       value: 

@@ -475,7 +475,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: bc09e0ecdd5afbc18f311826aa371e61
+      Hash: 66fddba3085e41c0ef6cce84601f1def
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CardsObject
@@ -751,7 +751,7 @@ ScriptsOnlyBuild:
     className: Bot
   - hash:
       serializedVersion: 2
-      Hash: 242a2de279cc4262ee92a4845659b2de
+      Hash: d9770224235ab245dcfe135ba7912aa8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CardScriptableObject
@@ -1177,7 +1177,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 99cd0bcee88fcd2558b6d11a7a445c64
+      Hash: 5fe30518597e10c9a6ed23e80fd02953
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FightPoint

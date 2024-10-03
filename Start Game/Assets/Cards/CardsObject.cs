@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "One", order = 51)]
 public class CardsObject : ScriptableObject
 {
-	[SerializeField] public int attackDamage, health, price;
+	[SerializeField] public int attackDamage, health, price, index, indexD;
 	[SerializeField] public string word, description;
 	[SerializeField] public float time;
 	public int Damadg0
@@ -30,5 +30,13 @@ public class CardsObject : ScriptableObject
 	public float Time0
 	{
 		get { return time; }
+	}
+	public int Index0
+	{
+		get { return index; }
+	}
+	public int IndexD0
+	{
+		get { return indexD; }
 	}
 }

@@ -57,6 +57,8 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().word = NewCard1.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard1.description;
 					Kard.GetComponent<CardScriptableObject>().Stime = NewCard1.time;
+					Kard.GetComponent<CardScriptableObject>().index = NewCard1.index;
+					Kard.GetComponent<CardScriptableObject>().indexDopol = NewCard1.indexD;
 					break;
 				case 2:
 					Kard.GetComponent<CardScriptableObject>().attackDamage = NewCard2.attackDamage;
@@ -65,6 +67,8 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().word = NewCard2.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard2.description;
 					Kard.GetComponent<CardScriptableObject>().Stime = NewCard2.time;
+					Kard.GetComponent<CardScriptableObject>().index = NewCard2.index;
+					Kard.GetComponent<CardScriptableObject>().indexDopol = NewCard2.indexD;
 					break;
 				case 3:
 					Kard.GetComponent<CardScriptableObject>().attackDamage = NewCard3.attackDamage;
@@ -73,6 +77,8 @@ public class Bot : MonoBehaviour
 					Kard.GetComponent<CardScriptableObject>().word = NewCard3.word;
 					Kard.GetComponent<CardScriptableObject>().description = NewCard3.description;
 					Kard.GetComponent<CardScriptableObject>().Stime = NewCard3.time;
+					Kard.GetComponent<CardScriptableObject>().index = NewCard3.index;
+					Kard.GetComponent<CardScriptableObject>().indexDopol = NewCard3.indexD;
 					break;
 			}
 		}
@@ -96,9 +102,9 @@ public class Bot : MonoBehaviour
 			{
 				if (MoyCards.transform.GetChild(y).gameObject.GetComponent<CardScriptableObject>().price <= coin)
 				{
+					Debug.Log("Скинул карту: " + MoyCards.transform.GetChild(y).gameObject.GetComponent<CardScriptableObject>().word);
 					coin -= MoyCards.transform.GetChild(y).gameObject.GetComponent<CardScriptableObject>().price;
 					MoyCards.transform.GetChild(y).SetParent(Pered.transform.GetChild(0).transform);
-					Debug.Log("Скинул карту");
 					break;
 				}
 			}

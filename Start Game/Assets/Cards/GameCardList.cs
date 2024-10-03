@@ -74,6 +74,8 @@ public class GameCardList : MonoBehaviour
 				g.GetComponent<CardScriptableObject>().word = GameCards[j].word;
 				g.GetComponent<CardScriptableObject>().description = GameCards[j].description;
 				g.GetComponent<CardScriptableObject>().Stime = GameCards[j].time;
+				g.GetComponent<CardScriptableObject>().index = GameCards[j].index;
+				g.GetComponent<CardScriptableObject>().indexDopol = GameCards[j].indexD;
 				g.GetComponent<CardScriptableObject>().bot = bot;
 				g.GetComponent<CardScriptableObject>().GM = this;
 				g.GetComponent<CardScriptableObject>().Pered = Pered;

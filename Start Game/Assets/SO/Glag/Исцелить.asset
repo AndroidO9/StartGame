@@ -15,6 +15,8 @@ MonoBehaviour:
   attackDamage: 10
   health: 1
   price: 10
+  index: 1
+  indexD: 1
   word: "\u0418\u0441\u0446\u0435\u043B\u0438\u0442\u044C"
   description: "\u041B\u0435\u0447\u0438\u0442\u044C \u0432\u0441\u0435 \u043A\u0430\u0440\u0442\u044B
     \u043D\u0430 3 \u043F\u043E\u0438\u043D\u0442\u0430"
