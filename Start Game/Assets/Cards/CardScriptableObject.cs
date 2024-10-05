@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +10,7 @@ public class CardScriptableObject : MonoBehaviour
     [SerializeField] public string word, description;
     [SerializeField] public Text WordText, DescriptionText, AttackValueText, HealthNumderText, PriceText;
     public float time;
+    public float UItime;
     public Bot bot;
     public GameCardList GM;
     public int index; 
@@ -24,6 +25,16 @@ public class CardScriptableObject : MonoBehaviour
     }
 	private void Update()
 	{
+		UItime -= Time.deltaTime;
+		if(UItime <= 0)
+		{
+			UItime = 1;
+			WordText.text = word;
+			DescriptionText.text = description;
+			AttackValueText.text = attackDamage.ToString();
+			HealthNumderText.text = health.ToString();
+			PriceText.text = price.ToString();
+		}
 		if (index == 0)
 		{
 			if (attackDamage != 0)
@@ -41,8 +52,18 @@ public class CardScriptableObject : MonoBehaviour
 					}
 					else
 					{
-						int x = UnityEngine.Random.Range(0, PeredBot.transform.childCount);
-						PeredBot.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+						if (indexDopol == 0)
+						{
+							int x = UnityEngine.Random.Range(0, PeredBot.transform.childCount);
+							PeredBot.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+						}
+						else if(indexDopol == 1)
+						{
+							foreach (Transform t in PeredBot.transform)
+							{
+								t.gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+							}
+						}
 					}
 				}
 				else if (gameObject.transform.parent == PeredBot.transform)
@@ -53,8 +74,18 @@ public class CardScriptableObject : MonoBehaviour
 					}
 					else
 					{
-						int x = UnityEngine.Random.Range(0, Pered.transform.childCount);
-						Pered.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+						if (indexDopol == 0)
+						{
+							int x = UnityEngine.Random.Range(0, Pered.transform.childCount);
+							Pered.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+						}
+						else if (indexDopol == 1)
+						{
+							foreach (Transform t in Pered.transform)
+							{
+								t.gameObject.GetComponent<CardScriptableObject>().Dam(attackDamage);
+							}
+						}
 					}
 				}
 			}
@@ -94,14 +125,16 @@ public class CardScriptableObject : MonoBehaviour
 					}
 					break;
 				case 2:
-					if (gameObject.transform.parent == Pered.transform)
+					if (gameObject.transform.parent == Pered.transform && PeredBot.transform.childCount != 0)
 					{
 						int x = UnityEngine.Random.Range(0, PeredBot.transform.childCount);
+						PeredBot.transform.GetChild(x).rotation = Pered.transform.rotation;
 						PeredBot.transform.GetChild(x).SetParent(Pered.transform);
 					}
-					else if (gameObject.transform.parent == PeredBot.transform)
+					else if (gameObject.transform.parent == PeredBot.transform && Pered.transform.childCount != 0)
 					{
 						int x = UnityEngine.Random.Range(0, Pered.transform.childCount);
+						Pered.transform.GetChild(x).rotation = PeredBot.transform.rotation;	
 						Pered.transform.GetChild(x).SetParent(PeredBot.transform);
 					}
 					break;
@@ -146,7 +179,14 @@ public class CardScriptableObject : MonoBehaviour
 					}
 					break;
 			}
-			Destroy(gameObject);
+			if (gameObject.transform.parent == Pered.transform)
+			{
+				Destroy(gameObject);
+			}
+			else if (gameObject.transform.parent == PeredBot.transform)
+			{
+				Destroy(gameObject);
+			}
 		}
 		else if (index == 2)
 		{
@@ -196,16 +236,23 @@ public class CardScriptableObject : MonoBehaviour
 					if (gameObject.transform.parent == Pered.transform)
 					{
 						int x = UnityEngine.Random.Range(0, Pered.transform.childCount);
-						Pered.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().attackDamage += attackDamage;
+						Pered.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().attackDamage += 2;
 					}
 					else if (gameObject.transform.parent == PeredBot.transform)
 					{
 						int x = UnityEngine.Random.Range(0, PeredBot.transform.childCount);
-						PeredBot.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().attackDamage += attackDamage;
+						PeredBot.transform.GetChild(x).gameObject.GetComponent<CardScriptableObject>().attackDamage += 2;
 					}
 					break;
 			}
-			Destroy(gameObject);
+			if (gameObject.transform.parent == Pered.transform)
+			{
+				Destroy(gameObject);
+			}
+			else if (gameObject.transform.parent == PeredBot.transform)
+			{
+				Destroy(gameObject);
+			}
 		}
 	}
     public void Dam(int D)
@@ -216,5 +263,13 @@ public class CardScriptableObject : MonoBehaviour
             Destroy(gameObject);
 		}
 		HealthNumderText.text = health.ToString();
+	}
+	public void UpdateUI()
+	{
+		WordText.text = word;
+		DescriptionText.text = description;
+		AttackValueText.text = attackDamage.ToString();
+		HealthNumderText.text = health.ToString();
+		PriceText.text = price.ToString();
 	}
 }

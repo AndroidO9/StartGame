@@ -12,14 +12,13 @@ public class BotMap : MonoBehaviour
 	public CardsObject NewCard1, NewCard2, NewCard3;
 	public GameObject GM, bot;
 	public string NameMap;
-	public bool BWin;
+	public bool BWin, Boos;
 	public Camera Mcam, Pcam;
 	public GameObject Perexod;
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			//CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
 			TextForStart.gameObject.SetActive(true);
 		}
 	}
@@ -46,6 +45,7 @@ public class BotMap : MonoBehaviour
 			{
 				Perexod.SetActive(false);
 				BWin = true;
+				CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
 				GM.GetComponent<GameCardList>().GameCards.Add(NewCard1);
 				GM.GetComponent<GameCardList>().GameCards.Add(NewCard2);
 				GM.GetComponent<GameCardList>().GameCards.Add(NewCard3);
@@ -70,6 +70,7 @@ public class BotMap : MonoBehaviour
 		BWin = true;
 		Perexod.SetActive(false);
 		PlayerCharacteristic.instance.AddCoins(1);
+		CubeCoinObject.GetComponent<MeshRenderer>().material = CompleteTaskMateria;
 	}
 	public void Lose()
     {
@@ -92,7 +93,14 @@ public class BotMap : MonoBehaviour
 			bot.GetComponent<Bot>().coin = 0;
 			bot.GetComponent<Bot>().stop = false;
 			bot.GetComponent<Bot>().BotMap = gameObject;
-			bot.GetComponent<Bot>().HP = 100;
+			if(!Boos)
+			{
+				bot.GetComponent<Bot>().HP = 100;
+			}
+			else
+			{
+				bot.GetComponent<Bot>().HP = 250;
+			}
 			bot.GetComponent<Bot>().NewCard1 = NewCard1;
 			bot.GetComponent<Bot>().NewCard2 = NewCard2;
 			bot.GetComponent<Bot>().NewCard3 = NewCard3;

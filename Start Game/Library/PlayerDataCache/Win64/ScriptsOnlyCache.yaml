@@ -751,7 +751,7 @@ ScriptsOnlyBuild:
     className: Bot
   - hash:
       serializedVersion: 2
-      Hash: d9770224235ab245dcfe135ba7912aa8
+      Hash: df0cf5254e8781b3dfe5bbb172cbbcb8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CardScriptableObject

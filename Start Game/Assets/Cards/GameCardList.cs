@@ -28,11 +28,11 @@ public class GameCardList : MonoBehaviour
 		{
 			Destroy(t.gameObject);
 		}
-		foreach (Transform t in Pered.transform)
+		foreach (Transform t in Pered.transform.GetChild(0))
 		{
 			Destroy(t.gameObject);
 		}
-		foreach (Transform t in PeredBot.transform)
+		foreach (Transform t in PeredBot.transform.GetChild(0))
 		{
 			Destroy(t.gameObject);
 		}
@@ -78,8 +78,9 @@ public class GameCardList : MonoBehaviour
 				g.GetComponent<CardScriptableObject>().indexDopol = GameCards[j].indexD;
 				g.GetComponent<CardScriptableObject>().bot = bot;
 				g.GetComponent<CardScriptableObject>().GM = this;
-				g.GetComponent<CardScriptableObject>().Pered = Pered;
-				g.GetComponent<CardScriptableObject>().PeredBot = PeredBot;
+				g.GetComponent<CardScriptableObject>().Pered = Pered.transform.GetChild(0).gameObject;
+				g.GetComponent<CardScriptableObject>().PeredBot = PeredBot.transform.GetChild(0).gameObject;
+				Debug.Log(g.GetComponent<CardScriptableObject>().word + " " + GM);
 			}
 		}
 	}
