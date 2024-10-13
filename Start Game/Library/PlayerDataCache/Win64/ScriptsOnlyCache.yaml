@@ -9,8 +9,10 @@ ScriptsOnlyBuild:
     - ClearBotMap
     - Coin
     - GameCardList
+    - HPUI
     - KardsShop
     - LookAtCameraForObjects
+    - Menu
     - MyCards
     - Perexod
     - PlayerCharacteristic
@@ -20,6 +22,8 @@ ScriptsOnlyBuild:
     - ShopLogic
     - ShopUILogic
     - "\u0421omplexity"
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
     Unity.Rider.Editor.dll:
@@ -81,12 +85,78 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Button
+  - assembly: Assembly-CSharp
     fullTypeName: ShopUILogic
     methodName: OnBuyFirstItemButton
   - assembly: Assembly-CSharp
     fullTypeName: ClearBotMap
     methodName: Clear
   sceneClasses:
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 1604}
+    - Class: 114
+      Script: {instanceID: 2202}
+    - Class: 114
+      Script: {instanceID: 2626}
+    - Class: 114
+      Script: {instanceID: 2832}
+    - Class: 114
+      Script: {instanceID: 3124}
+    - Class: 114
+      Script: {instanceID: 4118}
+    - Class: 114
+      Script: {instanceID: 4372}
+    - Class: 114
+      Script: {instanceID: 5076}
+    - Class: 114
+      Script: {instanceID: 5342}
+    - Class: 114
+      Script: {instanceID: 6118}
+    - Class: 114
+      Script: {instanceID: 7244}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/World/WorldScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -106,13 +176,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -128,8 +200,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2148}
     - Class: 114
       Script: {instanceID: 2162}
-    - Class: 114
-      Script: {instanceID: 2202}
     - Class: 114
       Script: {instanceID: 2326}
     - Class: 114
@@ -147,19 +217,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 4118}
-    - Class: 114
       Script: {instanceID: 4124}
-    - Class: 114
-      Script: {instanceID: 4372}
     - Class: 114
       Script: {instanceID: 4786}
     - Class: 114
       Script: {instanceID: 4864}
     - Class: 114
       Script: {instanceID: 4878}
-    - Class: 114
-      Script: {instanceID: 5076}
     - Class: 114
       Script: {instanceID: 5256}
     - Class: 114
@@ -169,19 +233,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5706}
     - Class: 114
-      Script: {instanceID: 6116}
+      Script: {instanceID: 6118}
     - Class: 114
-      Script: {instanceID: 6194}
+      Script: {instanceID: 6196}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 7058}
+      Script: {instanceID: 7060}
     - Class: 114
-      Script: {instanceID: 7080}
+      Script: {instanceID: 7082}
     - Class: 114
-      Script: {instanceID: 7366}
+      Script: {instanceID: 7370}
     - Class: 114
-      Script: {instanceID: 7748}
+      Script: {instanceID: 7752}
+    - Class: 114
+      Script: {instanceID: 26306}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -895,6 +961,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f1ea9126b7b08164dc47bb8424a77ec9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SavePosition
+  - hash:
+      serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -937,7 +1009,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 180ee408e2233f7528afb39e63edeea2
+      Hash: ba4468935f9dbf542db22ecba3ecd155
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BotMap
@@ -1099,6 +1171,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: f255b7e7bbdb1065cc86b7bdc65e1fdc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1153,7 +1231,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: beda3243a799bcf9c3f74499bed80326
+      Hash: 4ec8235ee8640ac7756eea4d8871a0c0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameCardList
@@ -1193,9 +1271,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6d0da2e5c3e8e7a3b0df000b901b62be
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HPUI
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/World/WorldScene.unity
   playerPath: "C:/Users/dozmo/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/Bilds/\u0421\u043B\u043E\u0432\u0430\u0440\u0438\u043A/Start
-    Game.exe"
+    \u0441\u0442\u043E\u043B/Bilds/\u0421\u043B\u043E\u0432\u0430\u0440\u0438\u043A/\u0421\u043B\u043E\u0432\u0430\u0440\u0438\u043A.exe"

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 public class PlayerUI : MonoBehaviour
@@ -25,6 +25,6 @@ public class PlayerUI : MonoBehaviour
 
     public void UIUpdate(int NewCoins)
     {
-        CoinsText.text = "������:" + NewCoins;
+        CoinsText.text = "Количество монет: " + NewCoins;
     }
 }
